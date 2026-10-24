@@ -1,285 +1,1122 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101010">
-<meta name="description" content="FORMATIX — تصميم وتنفيذ أجنحة المعارض والمؤتمرات والفعاليات. تصميم ثلاثي الأبعاد، تصنيع، تجهيز وتركيب حلول عرض متكاملة.">
-<meta name="keywords" content="FORMATIX, تصميم معارض, تنفيذ أجنحة المعارض, تجهيز مؤتمرات, تنظيم فعاليات, تصميم ثلاثي الأبعاد, مصر">
-<meta property="og:title" content="FORMATIX | Exhibitions & Events">
-<meta property="og:description" content="نصمم المساحات التي تترك انطباعًا. تصميم وتنفيذ أجنحة المعارض والمؤتمرات والفعاليات.">
-<meta property="og:type" content="website">
-<title>FORMATIX | Exhibitions, Events & Conferences</title>
-<style>
-:root{--bg:#101010;--panel:#191919;--gold:#c7a56a;--white:#f7f5f0;--muted:#b7b3aa;--line:rgba(199,165,106,.27)}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:100px}
-body{background:var(--bg);color:var(--white);font-family:Arial,Tahoma,sans-serif;line-height:1.8}
-a{color:inherit;text-decoration:none}
-button,input,textarea,select{font:inherit}
-.container{width:min(1160px,91%);margin:auto}
-.gold{color:var(--gold)}
-.topbar{background:#080808;border-bottom:1px solid var(--line);color:var(--muted);font-size:12px;padding:8px 0}
-.topbar .container{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-header{position:sticky;top:0;z-index:20;background:rgba(16,16,16,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
-.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-size:29px;font-weight:900;letter-spacing:2px;line-height:1.3}
-.logo small{display:block;color:var(--gold);font-size:9px;letter-spacing:2.5px}
-nav{display:flex;align-items:center;gap:20px}
-nav a{font-size:13px;color:#e3dfd7;white-space:nowrap}
-nav a:hover{color:var(--gold)}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;background:var(--gold);color:#17130c;font-size:13px;font-weight:bold;border:1px solid var(--gold);cursor:pointer;transition:.25s}
-.btn:hover{background:transparent;color:var(--gold)}
-.btn-outline{background:transparent;color:var(--white)}
-.hero{min-height:650px;display:flex;align-items:center;position:relative;background:linear-gradient(90deg,rgba(8,8,8,.92),rgba(8,8,8,.37)),url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2000&q=85") center/cover}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg),transparent 28%);pointer-events:none}
-.hero-content{position:relative;z-index:1;max-width:760px;padding:85px 0}
-.eyebrow{font-size:12px;letter-spacing:2px;color:var(--gold);font-weight:bold;margin-bottom:16px}
-h1{font-size:clamp(40px,6vw,76px);line-height:1.2;margin-bottom:22px}
-.hero p{font-size:17px;color:#e1ddd6;max-width:620px;margin-bottom:30px}
-.actions{display:flex;gap:12px;flex-wrap:wrap}
-.section{padding:88px 0}
-.section-head{max-width:720px;margin-bottom:38px}
-.section-head h2{font-size:clamp(29px,4vw,44px);line-height:1.35;margin-bottom:12px}
-.section-head p{color:var(--muted)}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.service{background:var(--panel);border:1px solid #292929;padding:28px;transition:.25s}
-.service:hover{border-color:var(--gold);transform:translateY(-4px)}
-.service .num{color:var(--gold);font-size:12px;letter-spacing:2px}
-.service h3{font-size:21px;margin:12px 0}
-.service p{font-size:14px;color:var(--muted)}
-.work{background:#151515}
-.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.project{background:#1b1b1b;overflow:hidden;border:1px solid #2b2b2b}
-.project img{width:100%;aspect-ratio:16/10;object-fit:cover;transition:transform .45s}
-.project:hover img{transform:scale(1.035)}
-.project-info{padding:20px}
-.project-info h3{font-size:19px}
-.project-info p{font-size:13px;color:var(--muted);margin-top:4px}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:48px}
-.about-grid img{width:100%;aspect-ratio:4/5;object-fit:cover}
-.about-grid p{color:var(--muted);margin:14px 0}
-.checks{list-style:none;margin:20px 0}
-.checks li{margin:9px 0}
-.checks li:before{content:"✦";color:var(--gold);margin-left:10px}
-.process{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.step{padding:22px;background:var(--panel);border-top:2px solid var(--gold)}
-.step strong{font-size:25px;color:var(--gold)}
-.step h3{margin:8px 0}
-.step p{font-size:13px;color:var(--muted)}
-.cta{text-align:center;padding:70px 24px;background:linear-gradient(120deg,#29231a,#151515 70%);border:1px solid var(--line)}
-.cta h2{font-size:clamp(28px,4vw,42px);margin-bottom:12px}
-.cta p{color:var(--muted);margin-bottom:24px}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px}
-.contact-grid p{color:var(--muted);margin:12px 0}
-.contact-form{display:grid;gap:13px}
-.contact-form input,.contact-form textarea,.contact-form select{width:100%;background:var(--panel);border:1px solid #393939;color:var(--white);padding:14px;outline:none}
-.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{border-color:var(--gold)}
-.contact-form select option{background:var(--panel)}
-.contact-form textarea{min-height:120px;resize:vertical}
-footer{padding:32px 0;background:#080808;border-top:1px solid var(--line)}
-.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-footer p{font-size:12px;color:var(--muted)}
-.whatsapp{position:fixed;bottom:20px;left:18px;z-index:30;background:#25d366;color:#082412;border-radius:50px;padding:12px 18px;font-weight:bold;box-shadow:0 5px 25px #0008}
-@media(max-width:900px){.nav{padding:14px 0;flex-wrap:wrap}.nav .btn{margin-right:auto}nav{order:3;width:100%;overflow-x:auto;padding:5px 0 9px;gap:18px}.services{grid-template-columns:repeat(2,minmax(0,1fr))}.about-grid{gap:25px}.process{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:580px){.topbar .container{font-size:10px}.logo{font-size:24px}.nav .btn{padding:9px 12px;font-size:11px}.hero{min-height:550px;background-position:58% center}.hero-content{padding:65px 0}.hero p{font-size:15px}.section{padding:62px 0}.services,.gallery,.about-grid,.contact-grid{grid-template-columns:1fr}.about-grid img{aspect-ratio:16/10}.process{grid-template-columns:1fr 1fr}.step{padding:15px}.cta{padding:48px 18px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#11110f">
+
+  <title>FORMATIX | Interior Design, Finishing & Architecture</title>
+  <meta name="description" content="FORMATIX delivers refined interior design, 3D visualization, finishing, renovation and turnkey solutions for apartments, villas, palaces and chalets.">
+  <meta name="keywords" content="FORMATIX, interior design Egypt, 3D interior design, finishing, renovation, apartment finishing, villa design">
+  <meta name="author" content="FORMATIX">
+  <meta property="og:title" content="FORMATIX | Build. Design. Live.">
+  <meta property="og:description" content="Thoughtful design. Exceptional spaces. Complete execution.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #11110f;
+      --panel: #191916;
+      --panel2: #20201b;
+      --gold: #c9a66b;
+      --gold-light: #e4ca95;
+      --text: #f6f3ed;
+      --muted: #aaa79f;
+      --line: rgba(201,166,107,.22);
+      --max: 1200px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Manrope', sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; object-fit: cover; }
+    button, input, textarea, select { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    .container { width: min(var(--max), 90%); margin: auto; }
+
+    .gold { color: var(--gold-light); }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gold-light);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section { padding: 100px 0; }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 42px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.15;
+      margin-top: 16px;
+      letter-spacing: -1.5px;
+    }
+
+    .section-head p {
+      max-width: 430px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .btn {
+      min-height: 50px;
+      padding: 13px 23px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--gold);
+      transition: .25s ease;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .4px;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #14130f;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline:hover {
+      background: var(--gold);
+      color: #11110f;
+    }
+
+    /* Header */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(17,17,15,.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand { display: flex; flex-direction: column; line-height: 1; }
+
+    .brand-name {
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: 4px;
+    }
+
+    .brand-tag {
+      margin-top: 8px;
+      color: var(--gold);
+      font-size: 8px;
+      letter-spacing: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .nav-links a {
+      color: #d2cfc8;
+      font-size: 11px;
+      font-weight: 700;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover { color: var(--gold-light); }
+
+    .menu-btn {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--line);
+      color: var(--text);
+      padding: 9px 13px;
+      cursor: pointer;
+    }
+
+    /* Hero */
+
+    .hero {
+      min-height: 690px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      isolation: isolate;
+      background:
+        linear-gradient(90deg, rgba(10,10,9,.96) 0%, rgba(10,10,9,.78) 45%, rgba(10,10,9,.20) 100%),
+        linear-gradient(0deg, rgba(17,17,15,.65), transparent 55%),
+        url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85') center/cover;
+    }
+
+    .hero-content { max-width: 760px; padding: 90px 0; }
+
+    .hero h1 {
+      margin: 24px 0;
+      font-size: clamp(42px, 6.5vw, 78px);
+      line-height: 1.06;
+      letter-spacing: -3px;
+      font-weight: 800;
+    }
+
+    .hero h1 span { color: var(--gold-light); }
+
+    .hero p {
+      max-width: 600px;
+      color: #d1cec6;
+      font-size: clamp(14px, 1.6vw, 17px);
+      margin-bottom: 32px;
+    }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; }
+
+    .hero-note {
+      margin-top: 55px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.2);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      color: #d1cec6;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+    }
+
+    /* Intro */
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 75px;
+      align-items: center;
+    }
+
+    .intro-image { position: relative; padding: 0 20px 20px 0; }
+
+    .intro-image img { height: 480px; }
+
+    .intro-image::after {
+      content: "";
+      position: absolute;
+      inset: 20px 0 0 20px;
+      border: 1px solid var(--gold);
+      z-index: -1;
+    }
+
+    .intro-copy h2 {
+      font-size: clamp(32px, 4vw, 49px);
+      line-height: 1.15;
+      margin: 18px 0 23px;
+      letter-spacing: -1.5px;
+    }
+
+    .intro-copy p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 17px;
+    }
+
+    .text-link {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 800;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 5px;
+    }
+
+    /* Services */
+
+    .services { background: #171714; }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .service-card {
+      padding: 30px 25px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.015);
+      transition: .3s ease;
+    }
+
+    .service-card:hover {
+      background: var(--panel2);
+      transform: translateY(-5px);
+      border-color: var(--gold);
+    }
+
+    .service-number {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .service-card h3 { font-size: 20px; margin: 25px 0 12px; }
+
+    .service-card p { color: var(--muted); font-size: 13px; }
+
+    .service-card .mini-line {
+      width: 38px;
+      height: 2px;
+      background: var(--gold);
+      margin-top: 25px;
+    }
+
+    /* Portfolio */
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+    }
+
+    .project {
+      position: relative;
+      min-height: 310px;
+      overflow: hidden;
+      background: var(--panel);
+      grid-column: span 4;
+    }
+
+    .project.wide { grid-column: span 8; }
+
+    .project img {
+      height: 100%;
+      min-height: 310px;
+      position: absolute;
+      inset: 0;
+      transition: transform .6s;
+    }
+
+    .project:hover img { transform: scale(1.06); }
+
+    .project::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,.88), transparent 75%);
+    }
+
+    .project-info {
+      position: absolute;
+      z-index: 2;
+      bottom: 23px;
+      left: 23px;
+      right: 23px;
+    }
+
+    .project-info small {
+      color: var(--gold-light);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .project-info h3 { font-size: 22px; margin-top: 6px; }
+
+    .portfolio-note {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 20px;
+    }
+
+    /* Philosophy */
+
+    .philosophy {
+      background:
+        linear-gradient(rgba(10,10,9,.88), rgba(10,10,9,.92)),
+        url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=80') center/cover;
+      background-attachment: fixed;
+    }
+
+    .philosophy-inner { max-width: 780px; }
+
+    .philosophy h2 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.12;
+      margin: 20px 0;
+      letter-spacing: -2px;
+    }
+
+    .philosophy p { color: #cbc8c0; max-width: 650px; font-size: 15px; }
+
+    .values-grid {
+      margin-top: 45px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .value { border-top: 1px solid var(--gold); padding-top: 18px; }
+
+    .value h3 { font-size: 16px; margin-bottom: 7px; }
+
+    .value p { font-size: 12px; color: var(--muted); }
+
+    /* Process */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .process-step { border-top: 1px solid var(--line); padding-top: 20px; }
+
+    .process-step .number { color: var(--gold); font-size: 12px; letter-spacing: 2px; }
+
+    .process-step h3 { margin: 15px 0 10px; font-size: 17px; }
+
+    .process-step p { color: var(--muted); font-size: 12px; }
+
+    /* CTA */
+
+    .cta-box {
+      padding: 65px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+      border: 1px solid var(--line);
+      background: linear-gradient(115deg, #22211c, #171714);
+    }
+
+    .cta-box h2 {
+      font-size: clamp(30px, 4vw, 45px);
+      line-height: 1.15;
+      margin: 15px 0;
+    }
+
+    .cta-box p { color: var(--muted); max-width: 540px; font-size: 13px; }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 70px;
+    }
+
+    .contact-copy h2 {
+      font-size: clamp(33px, 4vw, 48px);
+      line-height: 1.15;
+      margin: 17px 0;
+    }
+
+    .contact-copy > p { color: var(--muted); font-size: 14px; margin-bottom: 25px; }
+
+    .contact-detail {
+      padding: 17px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-detail small {
+      display: block;
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+    }
+
+    .contact-detail span { font-size: 14px; }
+
+    .contact-form {
+      padding: 30px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 17px;
+    }
+
+    .field { display: flex; flex-direction: column; gap: 7px; margin-bottom: 17px; }
+
+    .field.full { grid-column: 1 / -1; }
+
+    .field label { color: #d7d3ca; font-size: 11px; font-weight: 700; }
+
+    .field input, .field textarea, .field select {
+      width: 100%;
+      background: #11110f;
+      color: var(--text);
+      border: 1px solid #39372f;
+      padding: 13px;
+      outline: none;
+      border-radius: 0;
+    }
+
+    .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--gold); }
+
+    .field textarea { min-height: 120px; resize: vertical; }
+
+    .form-help { font-size: 11px; color: var(--muted); margin-top: 12px; }
+
+    /* Arabic section */
+
+    .arabic {
+      background: #e9e4d9;
+      color: #22211d;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    .arabic .eyebrow { color: #82612e; letter-spacing: 0; font-size: 12px; }
+
+    .arabic .eyebrow::before { background: #82612e; }
+
+    .arabic h2 {
+      font-size: clamp(28px, 4vw, 43px);
+      line-height: 1.4;
+      margin: 17px 0;
+    }
+
+    .arabic p { color: #57544c; font-size: 15px; }
+
+    .arabic-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .arabic-list { list-style: none; margin-top: 18px; }
+
+    .arabic-list li {
+      border-bottom: 1px solid rgba(0,0,0,.12);
+      padding: 12px 0;
+      color: #35332e;
+      font-size: 14px;
+    }
+
+    .arabic-list li::before { content: "✦"; color: #82612e; margin-left: 10px; }
+
+    .arabic-card {
+      padding: 30px;
+      background: #dcd5c7;
+      border-right: 3px solid #94713a;
+    }
+
+    .arabic-card h3 { font-size: 22px; margin-bottom: 12px; }
+
+    .arabic .btn-primary { background: #29271f; color: white; border-color: #29271f; }
+
+    /* Footer */
+
+    .footer {
+      padding: 45px 0 25px;
+      background: #0b0b0a;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      padding-bottom: 30px;
+    }
+
+    .footer p { color: var(--muted); font-size: 11px; }
+
+    .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
+
+    .footer-links a { color: #d2cfc8; font-size: 11px; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      color: #77756e;
+      font-size: 10px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      z-index: 200;
+      right: 20px;
+      bottom: 20px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #25d366;
+      color: #092e18;
+      font-size: 25px;
+      font-weight: 800;
+      box-shadow: 0 8px 30px rgba(0,0,0,.35);
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        background: #11110f;
+        border-bottom: 1px solid var(--line);
+        padding: 22px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open { display: flex; }
+
+      .nav-links a { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.06); }
+
+      .menu-btn { display: block; }
+
+      .intro-grid, .contact-grid, .arabic-grid { grid-template-columns: 1fr; gap: 40px; }
+
+      .intro-image img { height: 380px; }
+
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .project, .project.wide { grid-column: span 6; }
+
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .cta-box { align-items: flex-start; flex-direction: column; }
+
+      .philosophy { background-attachment: scroll; }
+    }
+
+    @media (max-width: 600px) {
+      .container { width: 90%; }
+
+      .section { padding: 70px 0; }
+
+      .section-head { align-items: flex-start; flex-direction: column; gap: 16px; }
+
+      .hero { min-height: 650px; }
+
+      .hero h1 { letter-spacing: -1.7px; }
+
+      .hero-note { gap: 13px; font-size: 9px; }
+
+      .service-grid, .values-grid, .process-grid, .form-grid { grid-template-columns: 1fr; }
+
+      .project, .project.wide { grid-column: span 12; min-height: 280px; }
+
+      .project img { min-height: 280px; }
+
+      .contact-form { padding: 20px; }
+
+      .field.full { grid-column: auto; }
+
+      .footer-top, .footer-bottom { flex-direction: column; align-items: flex-start; }
+
+      .brand-name { font-size: 24px; }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="topbar">
-  <div class="container">
-    <span>FORMATIX — Design. Build. Experience.</span>
-    <span>المعارض • المؤتمرات • الفعاليات</span>
-  </div>
-</div>
+  <header class="header">
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="FORMATIX Home">
+        <span class="brand-name">FORMATIX</span>
+        <span class="brand-tag">BUILD · DESIGN · LIVE</span>
+      </a>
 
-<header>
-  <div class="container nav">
-    <a class="logo" href="#home">FORMATIX<small>EXHIBITIONS & EVENTS</small></a>
-    <nav aria-label="القائمة الرئيسية">
-      <a href="#home">الرئيسية</a>
-      <a href="#services">خدماتنا</a>
-      <a href="#work">أعمالنا</a>
-      <a href="#about">من نحن</a>
-      <a href="#process">مراحل العمل</a>
-      <a href="#contact">تواصل معنا</a>
-    </nav>
-    <a class="btn" href="#contact">اطلب عرض سعر</a>
-  </div>
-</header>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰ MENU</button>
 
-<main>
-<section class="hero" id="home">
-  <div class="container hero-content">
-    <div class="eyebrow">EXHIBITIONS · EVENTS · CONFERENCES</div>
-    <h1>نصنع مساحات<br><span class="gold">تترك انطباعًا.</span></h1>
-    <p>من الفكرة والتصميم ثلاثي الأبعاد إلى التصنيع والتركيب على أرض الواقع، نقدم حلولًا متكاملة لأجنحة المعارض والمؤتمرات والفعاليات.</p>
-    <div class="actions">
-      <a class="btn" href="#work">اكتشف أعمالنا</a>
-      <a class="btn btn-outline" href="#contact">ابدأ مشروعك</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#process">Our Process</a>
+        <a href="#contact">Contact</a>
+        <a href="#arabic">العربية</a>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="section" id="services">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">WHAT WE DO</div>
-      <h2>حلول متكاملة من <span class="gold">التصميم إلى التنفيذ</span></h2>
-      <p>خدمات تصميم وتجهيز المساحات التي تساعد علامتك التجارية على الظهور بصورة مميزة.</p>
-    </div>
-    <div class="services">
-      <article class="service"><span class="num">01 / DESIGN</span><h3>تصميم أجنحة المعارض</h3><p>تصميمات ثلاثية الأبعاد تراعي هوية العلامة التجارية وطبيعة المساحة وأهداف المشاركة.</p></article>
-      <article class="service"><span class="num">02 / BUILD</span><h3>التصنيع والتنفيذ</h3><p>تجهيز الخامات والتصنيع والتشطيبات وتركيب عناصر جناح العرض وفق نطاق المشروع.</p></article>
-      <article class="service"><span class="num">03 / EVENTS</span><h3>تجهيز الفعاليات</h3><p>تجهيز المساحات والديكورات والعناصر البصرية بما يناسب طبيعة كل فعالية.</p></article>
-      <article class="service"><span class="num">04 / CONFERENCES</span><h3>المؤتمرات وقاعات العرض</h3><p>تصميم وتجهيز المسارح وخلفيات العرض والمساحات المخصصة للمتحدثين والجمهور.</p></article>
-      <article class="service"><span class="num">05 / BRANDING</span><h3>الهوية البصرية للمساحات</h3><p>تنسيق عناصر العلامة التجارية والرسائل البصرية داخل مساحة العرض.</p></article>
-      <article class="service"><span class="num">06 / PROJECTS</span><h3>تنسيق مراحل المشروع</h3><p>متابعة متطلبات التصميم والتصنيع والتركيب والتسليم ضمن خطة عمل واضحة.</p></article>
-    </div>
-  </div>
-</section>
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">Interior Design · Finishing · Renovation</span>
+          <h1>Spaces Designed<br>to <span>Feel Different.</span></h1>
+          <p>
+            We transform ideas into thoughtfully designed spaces.
+            From the first concept and 3D visualization to finishing and
+            execution, FORMATIX brings design, function and detail together.
+          </p>
 
-<section class="section work" id="work">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">OUR WORK</div>
-      <h2>أفكار تتحول إلى <span class="gold">مساحات حقيقية</span></h2>
-      <p>استكشف مجالات التصميم والتنفيذ التي نعمل عليها في المعارض والمؤتمرات والفعاليات.</p>
-    </div>
-    <div class="gallery">
-      <article class="project">
-        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1100&q=85" alt="تصميم مساحة عرض عصرية" loading="lazy">
-        <div class="project-info"><h3>تصميم مساحات العرض</h3><p>التخطيط المعماري وتنسيق المساحات</p></div>
-      </article>
-      <article class="project">
-        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1100&q=85" alt="مؤتمر وفعالية للشركات" loading="lazy">
-        <div class="project-info"><h3>المؤتمرات والفعاليات</h3><p>تجهيز المساحات واستقبال الجمهور</p></div>
-      </article>
-      <article class="project">
-        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1100&q=85" alt="تجهيز فعالية مهنية" loading="lazy">
-        <div class="project-info"><h3>التجهيزات والديكورات</h3><p>عناصر بصرية وتجهيزات متناسقة</p></div>
-      </article>
-      <article class="project">
-        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1100&q=85" alt="مساحة فعالية مجهزة" loading="lazy">
-        <div class="project-info"><h3>التنفيذ وتجهيز المساحات</h3><p>التنسيق بين التفاصيل ومراحل العمل</p></div>
-      </article>
-    </div>
-  </div>
-</section>
+          <div class="hero-actions">
+            <a href="#portfolio" class="btn btn-primary">EXPLORE OUR WORK ↗</a>
+            <a href="#contact" class="btn btn-outline">DISCUSS YOUR PROJECT</a>
+          </div>
 
-<section class="section" id="about">
-  <div class="container about-grid">
-    <div>
-      <div class="eyebrow">ABOUT FORMATIX</div>
-      <h2>نفهم الفكرة، ونخطط للتنفيذ، ونهتم <span class="gold">بالتفاصيل.</span></h2>
-      <p>في FORMATIX نركز على تصميم المساحات وتجهيزها لتخدم أهداف العلامة التجارية وتقدم تجربة منظمة ومميزة للزوار.</p>
-      <p>نهتم بالتنسيق بين التصميم والتصنيع والتركيب، مع مراعاة طبيعة الموقع ومتطلبات المشروع والوقت المتاح للتنفيذ.</p>
-      <ul class="checks">
-        <li>تصميم ثلاثي الأبعاد قبل التنفيذ</li>
-        <li>الاهتمام بالخامات والتفاصيل النهائية</li>
-        <li>تنسيق مراحل التصنيع والتركيب</li>
-        <li>حلول تناسب طبيعة كل مشروع</li>
-      </ul>
-      <a class="btn" href="#contact">ناقش مشروعك معنا</a>
-    </div>
-    <div><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85" alt="مساحة عمل وتصميم احترافية" loading="lazy"></div>
-  </div>
-</section>
-
-<section class="section work" id="process">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">HOW WE WORK</div>
-      <h2>أربع مراحل نحو <span class="gold">النتيجة المطلوبة</span></h2>
-      <p>خطوات منظمة من فهم الفكرة إلى تجهيز المساحة وتسليمها.</p>
-    </div>
-    <div class="process">
-      <div class="step"><strong>01</strong><h3>فهم المتطلبات</h3><p>تحديد الهدف والمساحة والميزانية والموعد المطلوب.</p></div>
-      <div class="step"><strong>02</strong><h3>التصميم والتخطيط</h3><p>تطوير الفكرة ومراجعة التصور ثلاثي الأبعاد.</p></div>
-      <div class="step"><strong>03</strong><h3>التصنيع والتجهيز</h3><p>تجهيز العناصر وتنسيق تفاصيل التنفيذ والتركيب.</p></div>
-      <div class="step"><strong>04</strong><h3>التركيب والتسليم</h3><p>تجهيز المساحة وفق نطاق العمل المتفق عليه.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container cta">
-    <div class="eyebrow">LET'S CREATE SOMETHING GREAT</div>
-    <h2>عندك معرض أو فعالية قادمة؟</h2>
-    <p>شاركنا فكرتك ومتطلبات مشروعك لنناقش الحل المناسب.</p>
-    <a class="btn" href="#contact">اطلب عرض سعر</a>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">CONTACT FORMATIX</div>
-      <h2>احكيلنا عن <span class="gold">مشروعك</span></h2>
-      <p>املأ بياناتك، وسيتم فتح واتساب برسالة جاهزة تحتوي على تفاصيل طلبك.</p>
-    </div>
-    <div class="contact-grid">
-      <div>
-        <h3>خلينا نبدأ من فكرتك</h3>
-        <p>سواء كنت تخطط لجناح معرض أو مؤتمر أو فعالية خاصة، شاركنا التفاصيل الأساسية.</p>
-        <p><span class="gold">خدماتنا:</span> التصميم ثلاثي الأبعاد، التصنيع، التركيب، وتجهيز الفعاليات.</p>
-        <p><span class="gold">FORMATIX</span><br>Exhibitions • Events • Conferences</p>
-        <a class="btn" href="https://wa.me/201032219692" target="_blank" rel="noopener">تواصل معنا عبر واتساب</a>
+          <div class="hero-note">
+            <span>01 — INTERIOR DESIGN</span>
+            <span>02 — 3D VISUALIZATION</span>
+            <span>03 — COMPLETE EXECUTION</span>
+          </div>
+        </div>
       </div>
-      <form class="contact-form" id="contactForm">
-        <input id="name" type="text" placeholder="الاسم أو اسم الشركة" required>
-        <input id="phone" type="tel" placeholder="رقم الهاتف" required>
-        <select id="service" required>
-          <option value="">اختر الخدمة المطلوبة</option>
-          <option>تصميم جناح معرض</option>
-          <option>تصنيع وتنفيذ جناح</option>
-          <option>تجهيز مؤتمر</option>
-          <option>تجهيز فعالية</option>
-          <option>تصميم ثلاثي الأبعاد</option>
-          <option>خدمة أخرى</option>
-        </select>
-        <textarea id="details" placeholder="تفاصيل المشروع والمساحة والموعد المطلوب"></textarea>
-        <button class="btn" type="submit">إرسال الطلب عبر واتساب</button>
-      </form>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container intro-grid">
+        <div class="intro-image">
+          <img
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+            alt="Contemporary interior design with refined materials and warm lighting"
+            loading="lazy">
+        </div>
+
+        <div class="intro-copy">
+          <span class="eyebrow">The FORMATIX Approach</span>
+          <h2>Good Design Is More Than What You <span class="gold">See.</span></h2>
+          <p>
+            A beautiful space should do more than look impressive.
+            It should support the way you live, feel natural to move through,
+            and express a clear sense of identity.
+          </p>
+          <p>
+            At FORMATIX, we bring together creative thinking, practical planning
+            and careful attention to detail to create interiors that balance
+            aesthetics with everyday function.
+          </p>
+          <p>
+            Every project begins with understanding your needs, your taste,
+            your space and your priorities. The result is a considered design
+            direction with a clear path toward execution.
+          </p>
+          <a class="text-link" href="#contact">LET'S TALK ABOUT YOUR SPACE ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">What We Do</span>
+            <h2>One Vision. <span class="gold">Complete Solutions.</span></h2>
+          </div>
+          <p>
+            From early ideas to the finished space, our services are designed
+            to connect creativity, practical decisions and execution.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-number">01 / DESIGN</span>
+            <h3>Interior Design</h3>
+            <p>Thoughtful layouts, balanced proportions, material palettes and lighting concepts tailored to the way you live.</p>
+            <div class="mini-line"></div>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">02 / VISUALIZE</span>
+            <h3>3D Visualization</h3>
+            <p>Detailed visual presentations that help you understand the design, explore alternatives and make informed decisions before execution.</p>
+            <div class="mini-line"></div>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">03 / BUILD</span>
+            <h3>Finishing & Execution</h3>
+            <p>Coordinated finishing solutions that translate the approved design into a practical, well-considered result.</p>
+            <div class="mini-line"></div>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">04 / RENEW</span>
+            <h3>Renovation & Remodeling</h3>
+            <p>Reimagining existing spaces through improved layouts, updated finishes and solutions that make better use of every area.</p>
+            <div class="mini-line"></div>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">05 / RESIDENTIAL</span>
+            <h3>Complete Home Solutions</h3>
+            <p>Design and finishing services for apartments, villas, chalets and larger residential properties, shaped around your requirements.</p>
+            <div class="mini-line"></div>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">06 / DETAIL</span>
+            <h3>Materials & Finishes</h3>
+            <p>Guidance on finishes, textures, colors and details to create a consistent look while respecting project priorities.</p>
+            <div class="mini-line"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Selected Inspiration</span>
+            <h2>Ideas Into <span class="gold">Atmosphere.</span></h2>
+          </div>
+          <p>
+            Explore interior styles, spatial ideas and material combinations
+            that can inspire the direction of your next project.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="project wide">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Modern living room interior inspiration" loading="lazy">
+            <div class="project-info">
+              <small>RESIDENTIAL INTERIORS</small>
+              <h3>Contemporary Living</h3>
+            </div>
+          </article>
+
+          <article class="project">
+            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Elegant interior materials and furniture" loading="lazy">
+            <div class="project-info">
+              <small>DESIGN DETAILS</small>
+              <h3>Material Harmony</h3>
+            </div>
+          </article>
+
+          <article class="project">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Warm modern residential interior" loading="lazy">
+            <div class="project-info">
+              <small>SPACE PLANNING</small>
+              <h3>Modern Comfort</h3>
+            </div>
+          </article>
+
+          <article class="project wide">
+            <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1200&q=85" alt="Refined contemporary home interior" loading="lazy">
+            <div class="project-info">
+              <small>INTERIOR CONCEPTS</small>
+              <h3>Quiet Luxury</h3>
+            </div>
+          </article>
+        </div>
+
+        <p class="portfolio-note">
+          Note: The images above are visual references for presentation. Replace them with your own designs and completed projects as they become available.
+        </p>
+      </div>
+    </section>
+
+    <section class="section philosophy">
+      <div class="container">
+        <div class="philosophy-inner">
+          <span class="eyebrow">Our Philosophy</span>
+          <h2>Design With Purpose.<br><span class="gold">Details With Meaning.</span></h2>
+          <p>
+            We believe exceptional interiors come from more than trends.
+            They come from understanding people, respecting the space,
+            choosing materials carefully and making every design decision
+            serve a clear purpose.
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value">
+            <h3>Purposeful Planning</h3>
+            <p>Layouts and design choices guided by function, movement and the needs of the people using the space.</p>
+          </div>
+          <div class="value">
+            <h3>Attention to Detail</h3>
+            <p>A considered approach to materials, proportions, lighting and the finishing touches that bring a design together.</p>
+          </div>
+          <div class="value">
+            <h3>Design to Reality</h3>
+            <p>A practical path from visual concept to execution, with attention to priorities, coordination and clarity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">How We Work</span>
+            <h2>A Clear Path From <span class="gold">Idea to Space.</span></h2>
+          </div>
+          <p>
+            A structured process helps keep decisions clear and connects
+            the original vision with the finished result.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <span class="number">STEP 01</span>
+            <h3>Listen & Understand</h3>
+            <p>We discuss your needs, style, space, priorities and the scope of your project.</p>
+          </div>
+          <div class="process-step">
+            <span class="number">STEP 02</span>
+            <h3>Plan & Design</h3>
+            <p>We develop the design direction, spatial concept, materials and visual presentation.</p>
+          </div>
+          <div class="process-step">
+            <span class="number">STEP 03</span>
+            <h3>Coordinate & Execute</h3>
+            <p>Once the scope is approved, the execution plan is coordinated around the agreed requirements.</p>
+          </div>
+          <div class="process-step">
+            <span class="number">STEP 04</span>
+            <h3>Review & Refine</h3>
+            <p>Details are reviewed against the agreed design and project requirements as the work progresses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <span class="eyebrow">Your Next Chapter Starts Here</span>
+            <h2>Let's Create a Space<br><span class="gold">That Feels Like Yours.</span></h2>
+            <p>Tell us what you have in mind. We'll start with a conversation about your space, your priorities and the possibilities.</p>
+          </div>
+          <a href="#contact" class="btn btn-primary">START YOUR PROJECT ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <span class="eyebrow">Contact FORMATIX</span>
+          <h2>Have a Space in Mind?</h2>
+          <p>
+            Whether you are planning a new interior, renovating an existing
+            property or exploring a 3D concept, tell us a little about your
+            project and what you want to achieve.
+          </p>
+
+          <div class="contact-detail">
+            <small>WHATSAPP / DIRECT INQUIRIES</small>
+            <span>+20 103 221 9692</span>
+          </div>
+
+          <div class="contact-detail">
+            <small>PROJECT TYPES</small>
+            <span>Apartments · Villas · Palaces · Chalets</span>
+          </div>
+
+          <div class="contact-detail">
+            <small>OUR FOCUS</small>
+            <span>Design · Visualization · Finishing · Renovation</span>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">YOUR NAME</label>
+              <input id="name" name="name" type="text" placeholder="Full name" required>
+            </div>
+
+            <div class="field">
+              <label for="phone">PHONE NUMBER</label>
+              <input id="phone" name="phone" type="tel" placeholder="Your phone number" required>
+            </div>
+
+            <div class="field full">
+              <label for="type">PROJECT TYPE</label>
+              <select id="type" name="type" required>
+                <option value="">Choose a project type</option>
+                <option>Apartment</option>
+                <option>Villa</option>
+                <option>Palace</option>
+                <option>Chalet</option>
+                <option>Commercial Interior</option>
+                <option>Renovation</option>
+                <option>3D Design Only</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="details">TELL US ABOUT YOUR PROJECT</label>
+              <textarea id="details" name="details" placeholder="Location, approximate area, required services and your ideas..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">SEND INQUIRY VIA WHATSAPP ↗</button>
+          <p class="form-help">Your message will open in WhatsApp for you to review and send.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section arabic" id="arabic" lang="ar" dir="rtl">
+      <div class="container arabic-grid">
+        <div>
+          <span class="eyebrow">عن فورماتيكس</span>
+          <h2>نصمّم مساحات تعبّر عنك، ونحوّل الأفكار إلى واقع.</h2>
+          <p>
+            في FORMATIX بنؤمن إن التصميم الناجح مش مجرد شكل جميل؛
+            لكنه مساحة مدروسة تجمع بين الراحة والوظيفة والتناسق،
+            وتعكس شخصية أصحابها وتناسب احتياجاتهم اليومية.
+          </p>
+          <p style="margin-top:16px">
+            بنقدم حلولًا للتصميم الداخلي والتصميم ثلاثي الأبعاد،
+            وأعمال التشطيبات والتجديد، وتجهيز الشقق والفيلات والقصور
+            والشاليهات، بدايةً من فهم احتياجاتك وتطوير الفكرة، لحد
+            تحديد تفاصيل التصميم وخطة التنفيذ المناسبة.
+          </p>
+
+          <ul class="arabic-list">
+            <li>تصميم داخلي وتوزيع عملي للمساحات.</li>
+            <li>تصميمات ثلاثية الأبعاد لتوضيح شكل المكان قبل التنفيذ.</li>
+            <li>تشطيبات وتجديدات وفق نطاق العمل المتفق عليه.</li>
+            <li>اختيار الألوان والخامات والإضاءة والتفاصيل المكملة.</li>
+            <li>حلول متكاملة للمنازل تناسب طبيعة كل مشروع واحتياجاته.</li>
+          </ul>
+        </div>
+
+        <div class="arabic-card">
+          <h3>خلينا نبدأ مشروعك صح.</h3>
+          <p>
+            سواء بتجهّز شقة جديدة، أو بتجدّد بيتك، أو عندك فكرة محتاج
+            تشوفها في تصميم ثلاثي الأبعاد، احكيلنا عن مشروعك والمساحة
+            والميزانية التقريبية، ونبدأ بتحديد الخطوة المناسبة.
+          </p>
+          <p style="margin-top:14px">
+            هدفنا إن كل قرار في التصميم يكون له معنى، وإن النتيجة النهائية
+            تجمع بين الشكل المميز والاستخدام العملي والاهتمام بالتفاصيل.
+          </p>
+          <a href="#contact" class="btn btn-primary" style="margin-top:24px">تواصل معنا وابدأ مشروعك ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#home" class="brand">
+          <span class="brand-name">FORMATIX</span>
+          <span class="brand-tag">BUILD · DESIGN · LIVE</span>
+        </a>
+
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+          <a href="#arabic">العربية</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> FORMATIX. All rights reserved.</p>
+        <p>Thoughtful spaces. Meaningful details.</p>
+      </div>
     </div>
-  </div>
-</section>
-</main>
+  </footer>
 
-<footer>
-  <div class="container footer-row">
-    <a class="logo" href="#home">FORMATIX<small>EXHIBITIONS & EVENTS</small></a>
-    <p>© <span id="year"></span> FORMATIX. جميع الحقوق محفوظة.</p>
-    <a class="gold" href="#home">العودة للأعلى ↑</a>
-  </div>
-</footer>
+  <a
+    class="whatsapp"
+    href="https://wa.me/201032219692"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contact FORMATIX on WhatsApp">W</a>
 
-<a class="whatsapp" href="https://wa.me/201032219692" target="_blank" rel="noopener" aria-label="تواصل معنا عبر واتساب">واتساب</a>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
 
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
 
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
 
-  const whatsappNumber = "201032219692";
-  const name = document.getElementById("name").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const service = document.getElementById("service").value;
-  const details = document.getElementById("details").value.trim();
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-  const message = [
-    "طلب جديد من موقع FORMATIX",
-    "الاسم أو الشركة: " + name,
-    "رقم الهاتف: " + phone,
-    "الخدمة المطلوبة: " + service,
-    "تفاصيل المشروع: " + (details || "يرجى التواصل لمناقشة التفاصيل")
-  ].join("\n");
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
 
-  const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
-  window.open(url, "_blank", "noopener");
-});
-</script>
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const type = document.getElementById('type').value;
+      const details = document.getElementById('details').value.trim();
+
+      const message =
+        'Hello FORMATIX, I would like to discuss a project.%0A%0A' +
+        'Name: ' + encodeURIComponent(name) + '%0A' +
+        'Phone: ' + encodeURIComponent(phone) + '%0A' +
+        'Project type: ' + encodeURIComponent(type) + '%0A' +
+        'Details: ' + encodeURIComponent(details);
+
+      window.open('https://wa.me/201032219692?text=' + message, '_blank', 'noopener');
+    });
+  </script>
+
 </body>
 </html>
